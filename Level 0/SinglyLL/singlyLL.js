@@ -62,17 +62,19 @@ class LinkedList {
     }
 
     let current = this.head;
-    let prev = null;
-    let i = 0;
+    // let prev = null;
+    let i = 1;
 
     while (current && i < index - 1) {
-      prev = current;
+      // prev = current;
       current = current.next;
       i++;
     }
 
-    prev.next = newNode;
-    newNode.next = current;
+    // prev.next = newNode;
+    newNode.next = current.next
+    // newNode.next = current;
+    current.next = newNode
   }
 
   print() {
@@ -93,13 +95,16 @@ class LinkedList {
 
 const myList = new LinkedList();
 // console.log(myList);
-myList.append(10);
-myList.append(20);
-myList.append(30);
-myList.print();
-
-// myList.prepand(90);
+// myList.append(10);
+// myList.append(20);
+// myList.append(30);
 // myList.print();
+
+myList.prepand(90);
+myList.prepand(100);
+myList.prepand(40);
+myList.prepand(250);
+myList.print();
 
 // myList.append(40);
 // myList.append(30);
@@ -111,5 +116,5 @@ myList.print();
 
 // console.log(myList);
 
-myList.insertAt(100, 6);
+myList.insertAt(500, 4);
 myList.print();
