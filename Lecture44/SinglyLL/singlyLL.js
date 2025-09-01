@@ -111,10 +111,10 @@ myList.print();
 
 // myList.print();
 
-// myList.delete(20);
-// myList.print();
+myList.delete(90);
+myList.print();
 
 // console.log(myList);
 
-myList.insertAt(500, 4);
-myList.print();
+// myList.insertAt(500, 4);
+// myList.print();

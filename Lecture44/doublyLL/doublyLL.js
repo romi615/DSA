@@ -68,6 +68,7 @@ class DoublyLinkedList {
     current.next.prev = newNode;
     current.next = newNode;
     newNode.prev = current;
+
   }
 
   delete(index) {
@@ -122,18 +123,19 @@ dll.append(10);
 dll.append(20);
 dll.append(30);
 
-dll.printForward();
-// dll.printBackward();
 
 // dll.prepend(10);
 // dll.prepend(20);
 // dll.prepend(30);
 
-// dll.insertAtPos(50, 4);
-// dll.printForward();
+dll.printForward();
+// dll.printBackward();
+
+dll.insertAtPos(50, 5);
+dll.printForward();
 
 // dll.printForward();
 // dll.printBackward();
 
-dll.delete(5);
-dll.printForward();
+// dll.delete(5);
+// dll.printForward();

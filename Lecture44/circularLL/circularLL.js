@@ -74,24 +74,24 @@ class circularLinkedList {
     }
 
     let current = this.head;
-    // let result = "";
+    let result = "";
     do {
-      //   result += current.data + " -> ";
-      console.log(current.data);
+        result += current.data + " -> ";
+      // console.log(current.data);
       current = current.next;
     } while (current !== this.head);
-    // console.log(result + this.head.data);
+    console.log(result + this.head.data);
   }
 }
 
-// const CLL = new circularLinkedList();
+const CLL = new circularLinkedList();
 
-// CLL.insert(10);
-// CLL.insert(20);
-// CLL.insert(30);
-// CLL.insert(40);
-// CLL.insert(50);
-// CLL.display();
+CLL.insert(10);
+CLL.insert(20);
+CLL.insert(30);
+CLL.insert(40);
+CLL.insert(50);
+CLL.display();
 
 // CLL.delete(10);
 // CLL.display();
@@ -122,63 +122,63 @@ class circularLinkedList {
   slow.next = null;
 }*/
 
-function startCycle(head) {
-  let slow = head;
-  let fast = head;
+// function startCycle(head) {
+//   let slow = head;
+//   let fast = head;
 
-  while (fast !== null && fast.next !== null) {
-    slow = slow.next;
-    fast = fast.next.next;
+//   while (fast !== null && fast.next !== null) {
+//     slow = slow.next;
+//     fast = fast.next.next;
 
-    if (slow === fast) {
-      break;
-    }
-  }
+//     if (slow === fast) {
+//       break;
+//     }
+//   }
 
-  if (fast === null && fast.next === null) {
-    return;
-  }
+//   if (fast === null && fast.next === null) {
+//     return;
+//   }
 
-  slow = head;
-  while (slow !== fast) {
-    slow = slow.next;
-    fast = fast.next;
-  }
+//   slow = head;
+//   while (slow !== fast) {
+//     slow = slow.next;
+//     fast = fast.next;
+//   }
 
-  // slow.next = null;
+//   // slow.next = null;
 
-  if (slow === fast) return slow.data;
-}
+//   if (slow === fast) return slow.data;
+// }
 
-let node1 = new Node(10);
-let node2 = new Node(20);
-let node3 = new Node(30);
-let node4 = new Node(40);
-let node5 = new Node(50);
+// let node1 = new Node(10);
+// let node2 = new Node(20);
+// let node3 = new Node(30);
+// let node4 = new Node(40);
+// let node5 = new Node(50);
 
-node1.next = node2;
-node2.next = node3;
-node3.next = node4;
-node4.next = node5;
+// node1.next = node2;
+// node2.next = node3;
+// node3.next = node4;
+// node4.next = node5;
 
-node5.next = node2;
-console.log(hasCycle(node1));
-// removeCycle(node1);
-console.log(startCycle(node1));
+// node5.next = node2;
 // console.log(hasCycle(node1));
+// // removeCycle(node1);
+// console.log(startCycle(node1));
+// // console.log(hasCycle(node1));
 
-function hasCycle(head) {
-  let slow = head;
-  let fast = head;
+// function hasCycle(head) {
+//   let slow = head;
+//   let fast = head;
 
-  while (fast !== null && fast.next !== null) {
-    slow = slow.next;
-    fast = fast.next.next;
+//   while (fast !== null && fast.next !== null) {
+//     slow = slow.next;
+//     fast = fast.next.next;
 
-    if (slow === fast) {
-      return true;
-    }
-  }
+//     if (slow === fast) {
+//       return true;
+//     }
+//   }
 
-  return false;
-}
+//   return false;
+// }
