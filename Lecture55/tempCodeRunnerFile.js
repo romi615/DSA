@@ -1,1 +1,0 @@
-s[s.length-1] < n

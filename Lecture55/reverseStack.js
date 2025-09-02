@@ -1,29 +1,29 @@
-// function insertAtBottom(stack, x) {
-//   if (stack.length === 0) {
-//     stack.push(x);
-//     return;
-//   }
+function insertAtBottom(stack, x) {
+  if (stack.length === 0) {
+    stack.push(x);
+    return;
+  }
 
-//   let num = stack.pop();
+  let num = stack.pop();
 
-//   insertAtBottom(stack, x);
+  insertAtBottom(stack, x);
 
-//   stack.push(num);
-// }
-// function reverseStack(s) {
-//   if (s.length === 0) {
-//     return;
-//   }
+  stack.push(num);
+}
+function reverseStack(s) {
+  if (s.length === 0) {
+    return;
+  }
 
-//   let num = s.pop();
+  let num = s.pop();
 
-//   reverseStack(s);
+  reverseStack(s);
 
-//   insertAtBottom(s, num);
+  insertAtBottom(s, num);
 
-//   return stack;
-// }
+  return stack;
+}
 
-// let stack = [5, 4, 3, 2, 1];
-// let res = reverseStack(stack);
-// console.log(res);
+let stack = [5, 4, 3, 2, 1];
+let res = reverseStack(stack);
+console.log(res);

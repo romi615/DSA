@@ -1,50 +1,54 @@
-// function pushAtBottom(stack, x) {
-//   function solve(stack, x) {
-//     if (stack.length === 0) {
-//       stack.push(x);
-//       return;
-//     }
 
-//     // remove top element
-//     let top = stack.pop();
+// 1st way
+/*function pushAtBottom(stack, x) {
+  function solve(stack, x) {
+    if (stack.length === 0) {
+      stack.push(x);
+      return;
+    }
 
-//     // recursive call
-//     solve(stack, x);
+    // remove top element
+    let top = stack.pop();
 
-//     // push top element back
-//     stack.push(top);
-//   }
+    // recursive call
+    solve(stack, x);
 
-//   solve(stack, x);
-//   return stack; // return final stack
-// }
+    // push top element back
+    stack.push(top);
+  }
 
-// let stack = [7, 1, 4, 5];
-// let x = 9;
+  solve(stack, x);
+  return stack; // return final stack
+}
 
-// let res = pushAtBottom(stack, x);
-// console.log(res);
+let stack = [7, 1, 4, 5];
+let x = 9;
 
-// function pushAtBottom(stack, x){
+let res = pushAtBottom(stack, x);
+console.log(res);
+*/
 
-//   if(stack.length === 0){
-//     stack.push(x);
-//     return;
-//   }
+// 2nd way
+function pushAtBottom(stack, x){
 
-//   let num = stack.pop();
+  if(stack.length === 0){
+    stack.push(x);
+    return;
+  }
 
-//   pushAtBottom(stack, x);
+  let num = stack.pop();
 
-//   stack.push(num);
+  pushAtBottom(stack, x);
 
-//   return stack;
-// }
+  stack.push(num);
 
-// let stack = [7, 1, 4, 5];
-// let x = 9;
+  return stack;
+}
 
-// let res = pushAtBottom(stack, x);
-// console.log(res);
+let stack = [7, 1, 4, 5];
+let x = 9;
+
+let res = pushAtBottom(stack, x);
+console.log(res);
 
 
